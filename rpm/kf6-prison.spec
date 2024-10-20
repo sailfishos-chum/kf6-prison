@@ -17,11 +17,11 @@ BuildRequires:  make
 BuildRequires: kf6-kconfig-devel >= %{majmin_ver_kf6}
 
 # Required:
-
 BuildRequires: pkgconfig(libqrencode)
 BuildRequires: doxygen
 
-BuildRequires: qt6-qtbase-devel
+#BuildRequires: qt6-qtbase-devel
+BuildRequires: pkgconfig(Qt6Core)
 BuildRequires: qt6-qttools-devel
 
 # Optional:
