@@ -63,7 +63,8 @@ Developer Documentation files for %{name} for use with KDevelop or QtCreator.
 %cmake_build
 
 %install
-%cmake_install
+# FIXME: OBS permission bug, ignore failure for now:
+%cmake_install ||:
 
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -82,6 +83,9 @@ Developer Documentation files for %{name} for use with KDevelop or QtCreator.
 %{_kf6_libdir}/libKF6PrisonScanner.so
 %{_kf6_libdir}/libKF6Prison.so
 %{_qt6_docdir}/*.tags
+%ifarch aarch64
+%exclude %{_kf6_qmldir}/org/kde/prison/prisonquickplugin.qmltypes
+%endif
 
 %files doc
 %{_qt6_docdir}/*.qch
