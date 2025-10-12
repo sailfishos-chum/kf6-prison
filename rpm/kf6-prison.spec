@@ -49,11 +49,11 @@ Requires:       %{name} = %{version}-%{release}
 The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
-%package        doc
-Summary:        Developer Documentation files for %{name}
-BuildArch:      noarch
-%description    doc
-Developer Documentation files for %{name} for use with KDevelop or QtCreator.
+#%%package        doc
+#Summary:        Developer Documentation files for %{name}
+#BuildArch:      noarch
+#%%description    doc
+#Developer Documentation files for %%{name} for use with KDevelop or QtCreator.
 
 %prep
 %autosetup -n %{name}-%{version}/upstream -p1
@@ -81,7 +81,7 @@ Developer Documentation files for %{name} for use with KDevelop or QtCreator.
 %{_kf6_libdir}/cmake/KF6Prison/
 %{_kf6_libdir}/libKF6PrisonScanner.so
 %{_kf6_libdir}/libKF6Prison.so
-%{_qt6_docdir}/*.tags
+#%%{_qt6_docdir}/*.tags
 
-%files doc
-%{_qt6_docdir}/*.qch
+#%%files doc
+#%%{_qt6_docdir}/*.qch
