@@ -1,7 +1,7 @@
-%global  kf_version 6.6.0
+%global kf_version 6.28.0
 
 Name: kf6-prison
-Version: 6.18.0
+Version: 6.28.0
 Release: 0%{?dist}
 Summary: KDE Frameworks Library to read and write QR codes
 
