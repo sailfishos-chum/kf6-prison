@@ -50,7 +50,7 @@ The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
 #%%package        doc
-#Summary:        Developer Documentation files for %{name}
+#Summary:        Developer Documentation files for %%{name}
 #BuildArch:      noarch
 #%%description    doc
 #Developer Documentation files for %%{name} for use with KDevelop or QtCreator.
