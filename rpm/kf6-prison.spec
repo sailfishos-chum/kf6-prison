@@ -33,8 +33,9 @@ BuildRequires: pkgconfig(Qt6Qml)
 BuildRequires: pkgconfig(Qt6Quick)
 
 # Recommended:
-BuildRequires: pkgconfig(zxing)
+BuildRequires: pkgconfig(zxing) < 3.0.0
 BuildRequires: pkgconfig(libdmtx)
+#BuildRequires: pkgconfig(libqrencode)
 
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
