@@ -37,6 +37,12 @@ BuildRequires: pkgconfig(zxing) < 3.0.0
 BuildRequires: pkgconfig(libdmtx)
 #BuildRequires: pkgconfig(libqrencode)
 
+# FIXME: zxing 2.0 has a soname of 3, same as 3.0.0.
+# This leads to an 'unresolvable' state on OBS as two packages
+# provide the # .so.3.
+%global __requires_exclude libZXing.so.3
+Requires: zxing-cpp20
+
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 
